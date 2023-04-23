@@ -15,7 +15,7 @@ const App = () => {
   }, [pathname])
   return (
     <div className="App">
-      <h1> TOY 게시판 </h1>
+      <h1 className="text-3xl font-bold text-blue-600"> TOY 게시판 </h1>
       <Routes>
         <Route path='/home' element={<Home />} />
       </Routes>
