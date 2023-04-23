@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import './App.scss';
+import { Route, Routes, useNavigate, BrowserRouter } from 'react-router-dom';
+import Home from "./Home"
+import { useLocation } from "react-router";
 
-function App() {
+const App = () => {
+  const navigate = useNavigate()
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    if (pathname === '/') {
+      navigate('/home')
+    }
+  }, [pathname])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1> TOY 게시판 </h1>
+      <Routes>
+        <Route path='/home' element={<Home />} />
+      </Routes>
     </div>
   );
 }
