@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import './App.scss';
 import { Route, Routes, useNavigate, BrowserRouter } from 'react-router-dom';
-import Home from "./Home"
+import Home from "./pages/Home/Home"
+import { SignIn } from './pages/sign-in';
 import { useLocation } from "react-router";
 
 const App = () => {
@@ -15,9 +16,9 @@ const App = () => {
   }, [pathname])
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold text-blue-600"> TOY 게시판 </h1>
       <Routes>
         <Route path='/home' element={<Home />} />
+        <Route path='/sign-in' element={<SignIn />} />
       </Routes>
     </div>
   );

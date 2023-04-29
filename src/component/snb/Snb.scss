@@ -1,0 +1,47 @@
+@import "../../Global.scss";
+
+$sideBarBackgroundColor: #222229;
+$sideBarColor: white;
+
+.Snb {
+    max-width: 250px;
+    min-width: 250px;
+    height: 100vh;
+    background-color: $sideBarBackgroundColor;
+    color: $sideBarColor;
+    font-weight: bold;
+    @include flexColumn(start, flex-start);
+
+    &>* {
+        width: 100%;
+    }
+
+    .header {
+        @include flexCenter;
+        height: 100px;
+    }
+
+    .section {
+        .SnbList {
+            .menuItem {
+                width: 100%;
+                padding: 12.5px;
+                box-sizing: border-box;
+                @include flex(center, flex-start);
+
+                .menuIcon {}
+
+                .menuText {
+                    @include flex(center, flex-start);
+                    padding-left: 10px;
+                    padding-top: 3px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: rgba(82, 82, 82, 0.5);
+                }
+            }
+        }
+    }
+}

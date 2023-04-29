@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PageTemplate from '../PageTemplate';
 
 const BoardWrapper = styled.div`
   display: flex;
@@ -45,7 +46,7 @@ const BoardItemTitle = styled.span`
 
 const BoardItemDate = styled.span`
   font-size: 1.2rem;
-  color: #999;
+color: #999;
 `;
 
 interface BoardItem {
@@ -72,19 +73,21 @@ const data: BoardItem[] = [
   },
 ];
 
-const Board: React.FC = () => {
+const Board = ({ id, title, date }: BoardItem) => {
   return (
-    <BoardWrapper>
-      <BoardTitle>게시판 목록</BoardTitle>
-      <BoardList>
-        {data.map(({ id, title, date }) => (
-          <BoardListItem key={id}>
-            <BoardItemTitle>{title}</BoardItemTitle>
-            <BoardItemDate>{date}</BoardItemDate>
-          </BoardListItem>
-        ))}
-      </BoardList>
-    </BoardWrapper>
+    <PageTemplate>
+      <BoardWrapper>
+        <BoardTitle>게시판 목록</BoardTitle>
+        <BoardList>
+          {data.map(({ id, title, date }) => (
+            <BoardListItem key={id}>
+              <BoardItemTitle>{title}</BoardItemTitle>
+              <BoardItemDate>{date}</BoardItemDate>
+            </BoardListItem>
+          ))}
+        </BoardList>
+      </BoardWrapper>
+    </PageTemplate>
   );
 };
 export default Board;
