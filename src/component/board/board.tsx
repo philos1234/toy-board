@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import PageTemplate from '../PageTemplate';
-
+import PageTemplate from '../pageTemplate';
+import Container from '../container/Container';
 const BoardWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -16,7 +16,14 @@ const BoardTitle = styled.h1`
   margin-bottom: 20px;
 `;
 
-const BoardList = styled.ul`
+// const BoardList = styled.ul`
+//   width: 100%;
+//   list-style-type: none;
+//   padding: 0;
+// `;
+
+
+const BoardList = styled.div`
   width: 100%;
   list-style-type: none;
   padding: 0;
@@ -27,6 +34,7 @@ const BoardListItem = styled.li`
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
+  height: 50px;  /* 이 부분을 추가하거나 변경해보세요 */
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
@@ -50,16 +58,16 @@ color: #999;
 `;
 
 interface BoardItem {
-  id: number;
-  title: string;
-  date: string;
+  id?: number;
+  title?: string;
+  date?: string;
 }
 
 const data: BoardItem[] = [
   {
     id: 1,
     title: '게시물 제목 1',
-    date: '2023-04-23',
+    date: '2023-04-23', 
   },
   {
     id: 2,
@@ -73,10 +81,9 @@ const data: BoardItem[] = [
   },
 ];
 
-const Board = ({ id, title, date }: BoardItem) => {
+const Board = ({ id, title , date }: BoardItem) => {
   return (
-    <PageTemplate>
-      <BoardWrapper>
+      <div >
         <BoardTitle>게시판 목록</BoardTitle>
         <BoardList>
           {data.map(({ id, title, date }) => (
@@ -86,8 +93,7 @@ const Board = ({ id, title, date }: BoardItem) => {
             </BoardListItem>
           ))}
         </BoardList>
-      </BoardWrapper>
-    </PageTemplate>
+      </div>
   );
 };
 export default Board;

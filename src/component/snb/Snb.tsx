@@ -3,14 +3,12 @@ import { Link } from "react-router-dom"
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import HomeIcon from '@mui/icons-material/Home';
 // import { createStyles, makeStyles } from "@material-ui/core/styles"
+interface Props {
+  style?: React.CSSProperties;
+  // 다른 props를 여기에 추가하세요.
+}
 
-// const useStyles = makeStyles({
-//     text: {
-
-//     }
-// })
-
-const Snb = () => {
+const Snb = ( {style}: Props) => {
     // const classes = useStyles()
     return (
         <nav className="Snb">
