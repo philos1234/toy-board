@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import PageTemplate from '../pageTemplate';
 import Container from '../container/Container';
 const BoardWrapper = styled.div`
   display: flex;
@@ -16,18 +15,18 @@ const BoardTitle = styled.h1`
   margin-bottom: 20px;
 `;
 
-// const BoardList = styled.ul`
-//   width: 100%;
-//   list-style-type: none;
-//   padding: 0;
-// `;
-
-
-const BoardList = styled.div`
+const BoardList = styled.ul`
   width: 100%;
   list-style-type: none;
   padding: 0;
 `;
+
+//
+// const BoardList = styled.div`
+//   width: 100%;
+//   list-style-type: none;
+//   padding: 0;
+// `;
 
 const BoardListItem = styled.li`
   display: flex;

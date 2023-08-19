@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
-import { styled } from '@mui/system';
-import { Button } from '@mui/material';
+import React, {FC} from 'react';
+import {styled} from "@mui/material/styles";
+import {Button} from "@mui/material";
 
 interface TitleProps {
     logo?: React.ReactNode;
@@ -39,7 +39,7 @@ const StyledButton = styled(Button)({
 });
 
 
-const Title: FC<TitleProps> = ({ logo, text, onButtonClick }) => {
+const Title: FC<TitleProps> = ({logo, text, onButtonClick}) => {
     return (
         <Header>
             <LogoContainer>

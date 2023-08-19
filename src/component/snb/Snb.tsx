@@ -1,7 +1,5 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import AssignmentIcon from '@mui/icons-material/Assignment';
-import HomeIcon from '@mui/icons-material/Home';
 // import { createStyles, makeStyles } from "@material-ui/core/styles"
 interface Props {
   style?: React.CSSProperties;
@@ -19,13 +17,11 @@ const Snb = ( {style}: Props) => {
                 <ul className="SnbList">
                     <Link to="/home">
                         <li className="menuItem">
-                            <HomeIcon className="menuIcon" />
                             <span className="menuText">홈</span>
                         </li>
                     </Link>
                     <Link to="/board">
                         <li className="menuItem">
-                            <AssignmentIcon className="menuIcon" />
                             <span className="menuText">게시물 목록</span>
                         </li>
                     </Link>

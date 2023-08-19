@@ -1,8 +1,8 @@
 import React, { Children } from 'react';
 import Board from '../../component/board/board';
-import PageTemplate from '../../component/pageTemplate';
 import Title from '../../component/Title/Title';
 import Container from '../../component/container/Container';
+import PageTemplate from "../../component/PageTemplate";
 
 const Home = () => {
     return (<>

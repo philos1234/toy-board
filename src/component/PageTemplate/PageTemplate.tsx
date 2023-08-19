@@ -1,6 +1,5 @@
 import React from "react"
 import Snb from "../snb/Snb"
-import styled from 'styled-components';
 
 interface Props {
     disableSideBar?: boolean
